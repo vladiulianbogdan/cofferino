@@ -1,17 +1,107 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
 
+const data = (await getEntry('pages', 'home'))?.data as any;
 ---
+<Layout title="Acasă" description={data.hero_subtitle}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <img
+      src={data.hero_image}
+      alt="Cofferino Hub"
+      class="w-full h-auto block"
+      onerror="this.src='/images/placeholder-hero.svg'"
+    />
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4 sm:px-6">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+        {data.hero_title}
+      </h1>
+      <p class="text-lg sm:text-xl mb-8 max-w-xl opacity-90">
+        {data.hero_subtitle}
+      </p>
+      <a href={data.hero_cta_href} class="btn-primary text-lg px-8 py-4">
+        {data.hero_cta_label}
+      </a>
+    </div>
+  </section>
+
+  <!-- VIZIUNE -->
+  <section class="py-20" style="background-color: var(--color-cream)">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-title text-3xl sm:text-4xl">{data.viziune_title}</h2>
+        <p class="text-lg leading-relaxed" style="color: var(--color-text-muted)">{data.viziune_text}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALITATE / WHY COFFERINO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center text-3xl sm:text-4xl mb-12">{data.calitate_title}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {data.calitate_items?.map((item: any) => (
+          <div class="card p-6 text-center">
+            <div class="text-4xl mb-4">{item.icon}</div>
+            <h3 class="font-800 text-lg mb-2" style="color: var(--color-brown-dark)">{item.title}</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT IMAGE – afișat doar dacă imaginea există -->
+  {data.about_image && (
+    <section class="py-20" style="background-color: var(--color-cream-dark)">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img
+            src={data.about_image}
+            alt="Viața la Cofferino"
+            class="w-full h-72 sm:h-96 object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA STRIP -->
+  <section class="py-16" style="background-color: var(--color-warm)">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-white">
+      <h2 class="text-3xl font-black mb-4" style="color: white">Înscrie-ți copilul acum!</h2>
+      <p class="text-lg opacity-90 mb-8">Locurile sunt limitate. Contactează-ne pentru mai multe informații.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" style="display: inline-block; border: 2px solid white; color: white; font-weight: 700; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none">
+          Contactează-ne
+        </a>
+        <a href="/program-de-vara" style="display: inline-block; background-color: var(--color-brown-dark); color: white; font-weight: 700; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none">
+          Program de Vară
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center text-3xl mb-4">Unde ne găsești</h2>
+      <p class="section-subtitle text-center mb-10">{data.maps_address}</p>
+      <div class="rounded-2xl overflow-hidden shadow-lg" style="height: 400px">
+        <iframe
+          src={data.maps_embed}
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locație Cofferino Hub"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</Layout>

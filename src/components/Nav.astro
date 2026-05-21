@@ -1,0 +1,102 @@
+---
+const navLinks = [
+  { label: 'Afterschool', href: '/afterschool' },
+  { label: 'Program de Vară', href: '/program-de-vara' },
+  { label: 'Vacanță Școlară', href: '/vacanta-an-scolar' },
+  { label: 'Galerie', href: '/galerie' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-3 shrink-0">
+      <img
+        src="/images/logo.jpeg"
+        alt="Cofferino Hub"
+        class="h-12 w-auto object-contain"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+      />
+      <div class="hidden items-center gap-2">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: var(--color-warm)">
+          <span class="text-white font-black text-lg">C</span>
+        </div>
+        <span class="font-black text-xl" style="color: var(--color-brown-dark)">Cofferino</span>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-1">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'px-4 py-2 rounded-full font-600 text-sm transition-colors duration-200',
+              currentPath.startsWith(link.href)
+                ? 'font-700 text-white'
+                : 'hover:text-brown-dark',
+            ]}
+            style={currentPath.startsWith(link.href)
+              ? 'background-color: var(--color-warm); color: white; font-weight: 700'
+              : 'color: var(--color-text-muted); font-weight: 600'}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 rounded-lg"
+      style="color: var(--color-brown)"
+      aria-label="Deschide meniu"
+      aria-expanded="false"
+    >
+      <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t" style="border-color: var(--color-cream-dark); background: var(--color-cream)">
+    <ul class="flex flex-col py-4 px-4 gap-1">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="block px-4 py-3 rounded-xl font-600 transition-colors"
+            style={currentPath.startsWith(link.href)
+              ? 'background-color: var(--color-warm); color: white; font-weight: 700'
+              : 'color: var(--color-text); font-weight: 600'}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden') === false;
+    menu?.classList.toggle('hidden');
+    hamburger?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

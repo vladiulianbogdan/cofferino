@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const data = (await getEntry('pages', 'afterschool'))?.data as any;
+
+const tabs = ['program', 'ateliere', 'echipa'] as const;
+---
+<Layout title="Afterschool" description={data.hero_subtitle}>
+  <!-- HERO -->
+  <section class="hero-section" style="min-height: 380px">
+    <div class="absolute inset-0">
+      <img src={data.hero_image} alt="Afterschool Cofferino" class="w-full h-full object-cover"
+        onerror="this.src='/images/placeholder-hero.svg'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
+      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+        {data.hero_title}
+      </h1>
+      <p class="text-lg opacity-90 max-w-xl">{data.hero_subtitle}</p>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap gap-3 justify-center mb-12" role="tablist">
+        <button class="tab-btn active" data-tab="program" role="tab" aria-selected="true" aria-controls="tab-program">
+          Program Afterschool
+        </button>
+        <button class="tab-btn" data-tab="ateliere" role="tab" aria-selected="false" aria-controls="tab-ateliere">
+          Ateliere și Opționale
+        </button>
+        <button class="tab-btn" data-tab="echipa" role="tab" aria-selected="false" aria-controls="tab-echipa">
+          Echipa
+        </button>
+      </div>
+
+      <!-- TAB: Program -->
+      <div id="tab-program" role="tabpanel" class="tab-panel">
+        <h2 class="section-title text-2xl sm:text-3xl mb-8 text-center">{data.program_title}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {data.program_items?.map((item: any) => (
+            <div class="rounded-2xl p-6 text-center" style="background-color: var(--color-cream)">
+              <div class="text-3xl font-black mb-2" style="color: var(--color-warm)">{item.schedule}</div>
+              <div class="font-700 text-lg mb-1" style="color: var(--color-brown-dark)">{item.label}</div>
+              <div class="text-sm" style="color: var(--color-text-muted)">{item.details}</div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-10 text-center">
+          <a href="/contact" class="btn-primary">Înscrie-ți copilul</a>
+        </div>
+      </div>
+
+      <!-- TAB: Ateliere -->
+      <div id="tab-ateliere" role="tabpanel" class="tab-panel hidden">
+        <h2 class="section-title text-2xl sm:text-3xl mb-8 text-center">{data.ateliere_title}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {data.ateliere_items?.map((item: any) => (
+            <div class="card p-6 flex items-start gap-4">
+              <div class="text-3xl shrink-0">{item.icon}</div>
+              <div>
+                <h3 class="font-700 text-base mb-1" style="color: var(--color-brown-dark)">{item.name}</h3>
+                <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- TAB: Echipa -->
+      <div id="tab-echipa" role="tabpanel" class="tab-panel hidden">
+        <h2 class="section-title text-2xl sm:text-3xl mb-8 text-center">{data.echipa_title}</h2>
+        <div class="max-w-3xl mx-auto">
+          {data.echipa_image && (
+            <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+              <img
+                src={data.echipa_image}
+                alt="Echipa Cofferino"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none'"
+              />
+            </div>
+          )}
+          <div class="text-lg leading-relaxed text-center" style="color: var(--color-text-muted)">
+            {data.echipa_text}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const tabBtns = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+  const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabPanels.forEach(p => p.classList.add('hidden'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(`tab-${target}`)?.classList.remove('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,192 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+locale: ro
+
+collections:
+  # ───────────────────────────────────────────────
+  # PAGINA HOME
+  # ───────────────────────────────────────────────
+  - name: "home"
+    label: "Pagina Principală"
+    files:
+      - name: "home"
+        label: "Pagina Principală"
+        file: "src/content/pages/home.md"
+        fields:
+          - { label: "Hero – Titlu principal", name: "hero_title", widget: "string" }
+          - { label: "Hero – Subtitlu", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+          - { label: "Hero – Text buton", name: "hero_cta_label", widget: "string" }
+          - { label: "Hero – Link buton", name: "hero_cta_href", widget: "string" }
+          - { label: "Secțiunea Viziune – Titlu", name: "viziune_title", widget: "string" }
+          - { label: "Secțiunea Viziune – Text", name: "viziune_text", widget: "text" }
+          - { label: "Secțiunea De ce Cofferino – Titlu", name: "calitate_title", widget: "string" }
+          - label: "Secțiunea De ce Cofferino – Carduri"
+            name: "calitate_items"
+            widget: "list"
+            fields:
+              - { label: "Emoji/Icon", name: "icon", widget: "string" }
+              - { label: "Titlu card", name: "title", widget: "string" }
+              - { label: "Text card", name: "text", widget: "text" }
+          - { label: "Imagine mare de jos", name: "about_image", widget: "image", required: false }
+          - { label: "Google Maps – Embed URL", name: "maps_embed", widget: "string", hint: "URL-ul din iframe-ul Google Maps" }
+          - { label: "Google Maps – Adresă afișată", name: "maps_address", widget: "string" }
+
+  # ───────────────────────────────────────────────
+  # AFTERSCHOOL
+  # ───────────────────────────────────────────────
+  - name: "afterschool"
+    label: "Afterschool"
+    files:
+      - name: "afterschool"
+        label: "Pagina Afterschool"
+        file: "src/content/pages/afterschool.md"
+        fields:
+          - { label: "Hero – Titlu", name: "hero_title", widget: "string" }
+          - { label: "Hero – Subtitlu", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+          - { label: "Program – Titlu secțiune", name: "program_title", widget: "string" }
+          - label: "Program – Ore"
+            name: "program_items"
+            widget: "list"
+            fields:
+              - { label: "Etichetă (ex: Program școlar)", name: "label", widget: "string" }
+              - { label: "Ore (ex: 13:00 – 18:00)", name: "schedule", widget: "string" }
+              - { label: "Detalii", name: "details", widget: "string" }
+          - { label: "Ateliere – Titlu secțiune", name: "ateliere_title", widget: "string" }
+          - label: "Ateliere – Listă"
+            name: "ateliere_items"
+            widget: "list"
+            fields:
+              - { label: "Emoji", name: "icon", widget: "string" }
+              - { label: "Denumire atelier", name: "name", widget: "string" }
+              - { label: "Descriere", name: "description", widget: "text" }
+          - { label: "Echipă – Titlu", name: "echipa_title", widget: "string" }
+          - { label: "Echipă – Text", name: "echipa_text", widget: "text" }
+          - { label: "Echipă – Imagine", name: "echipa_image", widget: "image", required: false }
+
+  # ───────────────────────────────────────────────
+  # PROGRAM DE VARĂ
+  # ───────────────────────────────────────────────
+  - name: "program_vara"
+    label: "Program de Vară"
+    files:
+      - name: "program-vara"
+        label: "Pagina Program de Vară"
+        file: "src/content/pages/program-vara.md"
+        fields:
+          - { label: "Hero – Titlu", name: "hero_title", widget: "string" }
+          - { label: "Hero – Subtitlu", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+          - { label: "Tabără de Vară – Titlu", name: "tabara_title", widget: "string" }
+          - { label: "Tabără de Vară – Text general", name: "tabara_text", widget: "text" }
+          - label: "Tabără de Vară – Activități incluse"
+            name: "tabara_activitati"
+            widget: "list"
+            field: { label: "Activitate", name: "item", widget: "string" }
+          - { label: "Tabără – Email contact", name: "tabara_contact_email", widget: "string" }
+          - { label: "Tabără – Telefon contact", name: "tabara_contact_phone", widget: "string" }
+          - { label: "Școala de Vară – Titlu", name: "scoala_vara_title", widget: "string" }
+          - { label: "Școala de Vară – Preț", name: "scoala_vara_price", widget: "string" }
+          - { label: "Școala de Vară – Text general", name: "scoala_vara_text", widget: "text" }
+          - label: "Școala de Vară – Ce îi așteaptă"
+            name: "scoala_vara_activitati"
+            widget: "list"
+            field: { label: "Activitate", name: "item", widget: "string" }
+          - label: "Școala de Vară – Teme săptămânale"
+            name: "scoala_vara_teme"
+            widget: "list"
+            field: { label: "Temă", name: "item", widget: "string" }
+          - { label: "Școala de Vară – Program ore", name: "scoala_vara_program", widget: "string" }
+          - { label: "Școala de Vară – Vârstă", name: "scoala_vara_varsta", widget: "string" }
+          - { label: "Școala de Vară – Notă (masă etc.)", name: "scoala_vara_nota", widget: "text" }
+          - { label: "Școala de Vară – Concluzie", name: "scoala_vara_concluzie", widget: "text" }
+          - { label: "Școala de Vară – Link video", name: "scoala_vara_video_url", widget: "string", required: false, hint: "URL YouTube sau link direct video" }
+          - label: "Școala de Vară – Poze"
+            name: "scoala_vara_images"
+            widget: "list"
+            field: { label: "Imagine", name: "item", widget: "image" }
+
+  # ───────────────────────────────────────────────
+  # VACANȚĂ AN ȘCOLAR
+  # ───────────────────────────────────────────────
+  - name: "vacanta_scolar"
+    label: "Vacanță An Școlar"
+    files:
+      - name: "vacanta-scolar"
+        label: "Pagina Vacanță An Școlar"
+        file: "src/content/pages/vacanta-scolar.md"
+        fields:
+          - { label: "Hero – Titlu", name: "hero_title", widget: "string" }
+          - { label: "Hero – Subtitlu", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+          - { label: "Text introductiv", name: "intro_text", widget: "text" }
+          - { label: "Activități – Titlu secțiune", name: "activitati_title", widget: "string" }
+          - label: "Activități – Listă"
+            name: "activitati_items"
+            widget: "list"
+            field: { label: "Activitate", name: "item", widget: "string" }
+          - { label: "Text program", name: "program_text", widget: "text" }
+          - { label: "Program ore", name: "program_ore", widget: "string" }
+          - { label: "Preț", name: "program_pret", widget: "string" }
+          - { label: "Notă (masă etc.)", name: "program_nota", widget: "string" }
+          - { label: "Concluzie", name: "concluzie", widget: "text" }
+          - { label: "Link video", name: "video_url", widget: "string", required: false }
+          - label: "Poze"
+            name: "images"
+            widget: "list"
+            field: { label: "Imagine", name: "item", widget: "image" }
+
+  # ───────────────────────────────────────────────
+  # CONTACT
+  # ───────────────────────────────────────────────
+  - name: "contact"
+    label: "Contact"
+    files:
+      - name: "contact"
+        label: "Pagina Contact"
+        file: "src/content/pages/contact.md"
+        fields:
+          - { label: "Hero – Titlu", name: "hero_title", widget: "string" }
+          - { label: "Hero – Subtitlu", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adresă", name: "address", widget: "string" }
+          - { label: "Program contact", name: "program_contact", widget: "string" }
+          - { label: "Google Maps – Embed URL", name: "maps_embed", widget: "string", hint: "URL-ul din iframe-ul Google Maps" }
+
+  # ───────────────────────────────────────────────
+  # GALERIE – ALBUME
+  # ───────────────────────────────────────────────
+  - name: "galerie"
+    label: "Galerie – Albume"
+    folder: "src/content/galerie"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titlu album", name: "title", widget: "string" }
+      - { label: "Slug (URL, fără spații)", name: "slug", widget: "string" }
+      - { label: "Descriere album", name: "description", widget: "text", required: false }
+      - { label: "Imagine copertă", name: "cover_image", widget: "image", required: false }
+      - { label: "Ordine afișare", name: "order", widget: "number", default: 99 }
+      - label: "Fotografii"
+        name: "images"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Imagine", name: "src", widget: "image" }
+          - { label: "Descriere (alt text)", name: "alt", widget: "string", required: false }
+      - label: "Videoclipuri"
+        name: "videos"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "URL video (YouTube sau direct)", name: "url", widget: "string" }
+          - { label: "Titlu video", name: "title", widget: "string", required: false }
+          - { label: "Imagine thumbnail", name: "thumbnail", widget: "image", required: false }

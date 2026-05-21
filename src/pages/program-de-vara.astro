@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const data = (await getEntry('pages', 'program-vara'))?.data as any;
+---
+<Layout title="Program de Vară" description={data.hero_subtitle}>
+  <!-- HERO -->
+  <section class="hero-section" style="min-height: 380px">
+    <div class="absolute inset-0">
+      <img src={data.hero_image} alt="Program de Vară" class="w-full h-full object-cover"
+        onerror="this.src='/images/placeholder-hero.svg'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
+      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+        {data.hero_title}
+      </h1>
+      <p class="text-lg opacity-90 max-w-xl">{data.hero_subtitle}</p>
+    </div>
+  </section>
+
+  <!-- TABARA DE VARA -->
+  <section class="py-20" style="background-color: var(--color-cream)">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-3xl sm:text-4xl mb-6">{data.tabara_title}</h2>
+      <div class="prose max-w-none text-lg leading-relaxed mb-8" style="color: var(--color-text-muted)">
+        {data.tabara_text?.split('\n\n').map((paragraph: string) => (
+          <p class="mb-4">{paragraph}</p>
+        ))}
+      </div>
+
+      <div class="rounded-2xl p-6 mb-8" style="background-color: white; box-shadow: 0 4px 24px rgba(106,63,42,0.08)">
+        <h3 class="font-800 text-xl mb-4" style="color: var(--color-brown-dark)">🎒 Activități de divertisment incluse:</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {data.tabara_activitati?.map((item: string) => (
+            <li class="flex items-start gap-2 text-sm" style="color: var(--color-text-muted)">
+              <span style="color: var(--color-warm)" class="mt-0.5 shrink-0">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-wrap gap-4 items-center text-sm" style="color: var(--color-text-muted)">
+        <span class="flex items-center gap-2">
+          📧 <a href={`mailto:${data.tabara_contact_email}`} style="color: var(--color-warm); font-weight: 600">{data.tabara_contact_email}</a>
+        </span>
+        <span class="flex items-center gap-2">
+          📞 <a href={`tel:${data.tabara_contact_phone?.replace(/\s/g, '')}`} style="color: var(--color-warm); font-weight: 600">{data.tabara_contact_phone}</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOALA DE VARA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+        <h2 class="section-title text-3xl sm:text-4xl">{data.scoala_vara_title}</h2>
+        <div class="rounded-full px-5 py-2 font-800 text-lg" style="background-color: var(--color-accent); color: var(--color-brown-dark)">
+          {data.scoala_vara_price}
+        </div>
+      </div>
+
+      <div class="text-lg leading-relaxed mb-8" style="color: var(--color-text-muted)">
+        {data.scoala_vara_text?.split('\n\n').map((paragraph: string) => (
+          <p class="mb-4">{paragraph}</p>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Activitati -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-cream)">
+          <h3 class="font-800 text-lg mb-4" style="color: var(--color-brown-dark)">✨ Ce îi așteaptă:</h3>
+          <ul class="space-y-2">
+            {data.scoala_vara_activitati?.map((item: string) => (
+              <li class="text-sm" style="color: var(--color-text-muted)">{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Teme saptamanale -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-cream)">
+          <h3 class="font-800 text-lg mb-4" style="color: var(--color-brown-dark)">📚 Exemple de teme săptămânale:</h3>
+          <ul class="space-y-2">
+            {data.scoala_vara_teme?.map((item: string) => (
+              <li class="text-sm" style="color: var(--color-text-muted)">{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Info rapida -->
+      <div class="rounded-2xl p-6 mb-8" style="background-color: var(--color-cream-dark)">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">📅</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Program</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.scoala_vara_program}</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">👧🧒</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Vârstă</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.scoala_vara_varsta}</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">💰</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Cost</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.scoala_vara_price}</div>
+          </div>
+        </div>
+      </div>
+
+      {data.scoala_vara_nota && (
+        <p class="text-sm mb-6" style="color: var(--color-text-muted)">
+          <em>{data.scoala_vara_nota}</em>
+        </p>
+      )}
+
+      {data.scoala_vara_video_url && (
+        <div class="rounded-2xl overflow-hidden mb-8 shadow-lg aspect-video">
+          <iframe
+            src={data.scoala_vara_video_url}
+            class="w-full h-full"
+            allowfullscreen
+            title="Video Școala de Vară Cofferino"
+          ></iframe>
+        </div>
+      )}
+
+      {data.scoala_vara_images?.length > 0 && (
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+          {data.scoala_vara_images.map((img: string) => (
+            <div class="rounded-xl overflow-hidden aspect-square">
+              <img src={img} alt="Școala de Vară" class="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+      )}
+
+      <p class="text-lg font-600 italic" style="color: var(--color-brown)">
+        {data.scoala_vara_concluzie}
+      </p>
+
+      <div class="mt-10 text-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Înscrie-ți copilul</a>
+      </div>
+    </div>
+  </section>
+</Layout>

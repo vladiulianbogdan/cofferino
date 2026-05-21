@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brown-dark: #4A2511;
+  --color-brown: #6B3F2A;
+  --color-brown-light: #A06040;
+  --color-warm: #C4714E;
+  --color-cream: #FEF6EC;
+  --color-cream-dark: #F5E6D3;
+  --color-accent: #E8A055;
+  --color-accent-light: #F5C87A;
+  --color-text: #2C1810;
+  --color-text-muted: #7A5C4E;
+  --color-white: #FFFFFF;
+  --font-family-sans: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    color: var(--color-text);
+    background-color: var(--color-white);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+    color: var(--color-brown-dark);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--color-warm);
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s, transform 0.1s;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brown);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: 2px solid var(--color-warm);
+    color: var(--color-warm);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn-outline:hover {
+    background-color: var(--color-warm);
+    color: white;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-brown-dark);
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(106, 63, 42, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(106, 63, 42, 0.14);
+  }
+
+  .hero-section {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(74, 37, 17, 0.7) 0%, rgba(106, 63, 42, 0.4) 100%);
+  }
+
+  .tab-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    background: none;
+    color: var(--color-text-muted);
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background-color: var(--color-warm);
+    color: white;
+  }
+  .tab-btn.active {
+    border-color: var(--color-brown);
+  }
+}

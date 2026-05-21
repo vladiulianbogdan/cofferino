@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const albumsRaw = await getCollection('galerie');
+const albums = albumsRaw.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+<Layout title="Galerie" description="Galerie foto și video Cofferino Hub – momente speciale din viața afterschool-ului nostru.">
+  <!-- HERO -->
+  <section class="hero-section" style="min-height: 340px">
+    <div class="absolute inset-0">
+      <img src="/images/header-galerie.png" alt="Galerie Cofferino" class="w-full h-full object-cover"
+        onerror="this.src='/images/placeholder-hero.svg'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
+      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+        Galerie
+      </h1>
+      <p class="text-lg opacity-90 max-w-xl">Momente frumoase din viața Cofferino.</p>
+    </div>
+  </section>
+
+  <!-- ALBUMS LIST -->
+  <section class="py-20" style="background-color: var(--color-cream)">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {albums.map((album) => (
+          <a
+            href={`#album-${album.data.slug}`}
+            class="card group overflow-hidden cursor-pointer"
+          >
+            <div class="h-48 overflow-hidden" style="background-color: var(--color-cream-dark)">
+              {album.data.cover_image ? (
+                <img
+                  src={album.data.cover_image}
+                  alt={album.data.title}
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-5xl\'>📷</div>'"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-5xl">📷</div>
+              )}
+            </div>
+            <div class="p-4">
+              <h3 class="font-700 text-base" style="color: var(--color-brown-dark)">{album.data.title}</h3>
+              {album.data.description && (
+                <p class="text-xs mt-1" style="color: var(--color-text-muted)">{album.data.description}</p>
+              )}
+              <div class="flex gap-3 mt-2 text-xs" style="color: var(--color-text-muted)">
+                {album.data.images?.length > 0 && <span>{album.data.images.length} foto</span>}
+                {album.data.videos?.length > 0 && <span>{album.data.videos.length} video</span>}
+                {(album.data.images?.length === 0 && album.data.videos?.length === 0) && <span>În curând</span>}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- ALBUM SECTIONS -->
+      {albums.map((album) => (
+        album.data.images?.length > 0 || album.data.videos?.length > 0 ? (
+          <div id={`album-${album.data.slug}`} class="mb-16 scroll-mt-24">
+            <h2 class="section-title text-2xl sm:text-3xl mb-6">{album.data.title}</h2>
+
+            {album.data.images?.length > 0 && (
+              <div class="columns-2 sm:columns-3 lg:columns-4 gap-3 mb-6">
+                {album.data.images.map((img: any) => (
+                  <div class="mb-3 rounded-xl overflow-hidden break-inside-avoid cursor-pointer"
+                    onclick={`openLightbox('${img.src}')`}>
+                    <img
+                      src={img.src}
+                      alt={img.alt ?? album.data.title}
+                      class="w-full object-cover hover:opacity-90 transition-opacity"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {album.data.videos?.length > 0 && (
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {album.data.videos.map((video: any) => (
+                  <div class="rounded-2xl overflow-hidden shadow-md">
+                    {video.url.includes('youtube') || video.url.includes('youtu.be') ? (
+                      <div class="aspect-video">
+                        <iframe
+                          src={video.url.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                          class="w-full h-full"
+                          allowfullscreen
+                          loading="lazy"
+                          title={video.title ?? 'Video Cofferino'}
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <video controls class="w-full" poster={video.thumbnail}>
+                        <source src={video.url} />
+                      </video>
+                    )}
+                    {video.title && (
+                      <div class="px-4 py-2 text-sm font-600" style="color: var(--color-brown-dark)">{video.title}</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : null
+      ))}
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-4" style="background: rgba(0,0,0,0.85)" onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white text-4xl leading-none" aria-label="Închide">&times;</button>
+    <img id="lightbox-img" src="" alt="Fotografie" class="max-w-full max-h-full rounded-xl object-contain" onclick="event.stopPropagation()" />
+  </div>
+</Layout>
+
+<script>
+  function openLightbox(src: string) {
+    const box = document.getElementById('lightbox') as HTMLElement;
+    const img = document.getElementById('lightbox-img') as HTMLImageElement;
+    img.src = src;
+    box.classList.remove('hidden');
+    box.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    const box = document.getElementById('lightbox') as HTMLElement;
+    box.classList.add('hidden');
+    box.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  (window as any).openLightbox = openLightbox;
+  (window as any).closeLightbox = closeLightbox;
+</script>

@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const data = (await getEntry('pages', 'vacanta-scolar'))?.data as any;
+---
+<Layout title="Vacanță An Școlar" description={data.hero_subtitle}>
+  <!-- HERO -->
+  <section class="hero-section" style="min-height: 380px">
+    <div class="absolute inset-0">
+      <img src={data.hero_image} alt="Vacanță Școlară" class="w-full h-full object-cover"
+        onerror="this.src='/images/placeholder-hero.svg'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
+      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+        {data.hero_title}
+      </h1>
+      <p class="text-lg opacity-90 max-w-xl">{data.hero_subtitle}</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-20" style="background-color: var(--color-cream)">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-lg leading-relaxed mb-10" style="color: var(--color-text-muted)">
+        {data.intro_text?.split('\n\n').map((paragraph: string) => (
+          <p class="mb-4">{paragraph}</p>
+        ))}
+      </div>
+
+      <!-- Activitati -->
+      <div class="rounded-2xl p-8 mb-8 bg-white shadow-sm">
+        <h2 class="font-800 text-xl mb-6" style="color: var(--color-brown-dark)">{data.activitati_title}</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {data.activitati_items?.map((item: string) => (
+            <li class="flex items-start gap-3 text-base" style="color: var(--color-text-muted)">
+              <span class="text-xl">{item.split(' ')[0]}</span>
+              <span>{item.split(' ').slice(1).join(' ')}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p class="text-base mb-10 italic" style="color: var(--color-text-muted)">{data.program_text}</p>
+
+      <!-- Info rapida -->
+      <div class="rounded-2xl p-6 mb-8" style="background-color: var(--color-cream-dark)">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">📅</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Program</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.program_ore}</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">💰</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Cost</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.program_pret}</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black mb-1" style="color: var(--color-warm)">🍽️</div>
+            <div class="font-700" style="color: var(--color-brown-dark)">Masă</div>
+            <div class="text-sm" style="color: var(--color-text-muted)">{data.program_nota}</div>
+          </div>
+        </div>
+      </div>
+
+      {data.video_url && (
+        <div class="rounded-2xl overflow-hidden mb-8 shadow-lg aspect-video">
+          <iframe
+            src={data.video_url}
+            class="w-full h-full"
+            allowfullscreen
+            title="Video Vacanță Școlară Cofferino"
+          ></iframe>
+        </div>
+      )}
+
+      {data.images?.length > 0 && (
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+          {data.images.map((img: string) => (
+            <div class="rounded-xl overflow-hidden aspect-square">
+              <img src={img} alt="Vacanță Școlară" class="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+      )}
+
+      <p class="text-lg font-600 italic mb-10" style="color: var(--color-brown)">{data.concluzie}</p>
+
+      <div class="text-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Înscrie-ți copilul</a>
+      </div>
+    </div>
+  </section>
+</Layout>
