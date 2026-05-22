@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2511"/>
+      <stop offset="50%" style="stop-color:#8B5E3C"/>
+      <stop offset="100%" style="stop-color:#C4714E"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="75%" cy="30%" r="35%">
+      <stop offset="0%" style="stop-color:#E8A055;stop-opacity:0.28"/>
+      <stop offset="100%" style="stop-color:#E8A055;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="70%" r="30%">
+      <stop offset="0%" style="stop-color:#FEF6EC;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#FEF6EC;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#glow1)"/>
+  <rect width="1200" height="420" fill="url(#glow2)"/>
+
+  <!-- Envelope decoration - center -->
+  <g transform="translate(490, 100)" opacity="0.2">
+    <rect x="0" y="0" width="220" height="160" rx="10" fill="rgba(255,255,255,0.9)"/>
+    <polyline points="0,0 110,90 220,0" fill="none" stroke="rgba(150,80,40,0.5)" stroke-width="3"/>
+    <line x1="0" y1="160" x2="85" y2="80" stroke="rgba(150,80,40,0.3)" stroke-width="2"/>
+    <line x1="220" y1="160" x2="135" y2="80" stroke="rgba(150,80,40,0.3)" stroke-width="2"/>
+  </g>
+
+  <!-- Phone icon - left -->
+  <g transform="translate(120, 120)" opacity="0.22">
+    <rect x="0" y="0" width="80" height="140" rx="12" fill="rgba(255,255,255,0.85)"/>
+    <rect x="10" y="15" width="60" height="90" rx="4" fill="rgba(150,80,40,0.2)"/>
+    <circle cx="40" cy="120" r="8" fill="rgba(150,80,40,0.3)"/>
+  </g>
+
+  <!-- Location pin - right -->
+  <g transform="translate(1000, 90)" opacity="0.22">
+    <circle cx="50" cy="50" r="50" fill="rgba(255,255,255,0.85)"/>
+    <circle cx="50" cy="50" r="22" fill="rgba(150,80,40,0.3)"/>
+    <polygon points="50,95 20,55 80,55" fill="rgba(255,255,255,0.85)"/>
+  </g>
+
+  <!-- Chat bubbles -->
+  <rect x="280" y="280" width="120" height="60" rx="16" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <polygon points="290,340 275,360 310,340" fill="rgba(255,255,255,0.1)"/>
+
+  <rect x="820" y="260" width="150" height="60" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <polygon points="960,320 975,340 940,320" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Dots -->
+  <circle cx="400" cy="70" r="3" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="600" cy="40" r="2.5" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="750" cy="75" r="2" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="900" cy="45" r="3" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="200" cy="350" r="2" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="1050" cy="340" r="2.5" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Bottom wave -->
+  <path d="M0 375 Q300 345 600 365 Q900 385 1200 355 L1200 420 L0 420 Z" fill="rgba(0,0,0,0.18)"/>
+</svg>
