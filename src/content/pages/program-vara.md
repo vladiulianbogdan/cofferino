@@ -2,7 +2,7 @@
 title: "Program de Vară"
 hero_title: "Vara la Cofferino"
 hero_subtitle: "Joacă, aventură și amintiri de neuitat pentru copiii tăi."
-hero_image: "/images/hero-vara.jpg"
+hero_image: "/images/hero-vara.svg"
 tabara_title: "Tabără de Vară Cofferino 🌿☀️"
 tabara_text: |
   Cofferino Summer Camp este locul în care copiii se bucură de o vacanță plină de aventură, joacă, prietenii și experiențe care creează amintiri frumoase pentru mult timp. Ne dorim să oferim un echilibru între distracție, autonomie, conectare cu natura și activități creative, într-un mediu cald, sigur și prietenos. ✨

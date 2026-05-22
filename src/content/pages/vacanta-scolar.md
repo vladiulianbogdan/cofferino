@@ -2,7 +2,7 @@
 title: "Vacanță An Școlar"
 hero_title: "Vacanțe pline de aventură"
 hero_subtitle: "Săptămâni speciale de joacă, creativitate și distracție în vacanțele școlare."
-hero_image: "/images/hero-vacanta.jpg"
+hero_image: "/images/hero-vacanta.svg"
 intro_text: |
   Vacanțele scurte dintre module devin la Cofferino adevărate săptămâni de aventură, joacă și creativitate! Ne bucurăm de un program special gândit pentru copii, în care combinăm timpul petrecut împreună, activitățile tematice și ieșirile distractive într-o atmosferă relaxată și prietenoasă. 💛
 activitati_title: "În fiecare vacanță pregătim:"

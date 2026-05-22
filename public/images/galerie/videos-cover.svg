@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A3E"/>
+      <stop offset="100%" style="stop-color:#4A2D7C"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <circle cx="300" cy="180" r="160" fill="rgba(232,160,85,0.12)"/>
+  <!-- Play button circle -->
+  <circle cx="300" cy="180" r="65" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <polygon points="285,155 285,205 330,180" fill="rgba(255,255,255,0.7)"/>
+  <text x="300" y="320" font-size="24" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" opacity="0.9">Videos</text>
+  <!-- Stars -->
+  <circle cx="80" cy="60" r="2" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="520" cy="40" r="2.5" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="150" cy="330" r="2" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="500" cy="340" r="2" fill="rgba(255,255,255,0.4)"/>
+</svg>

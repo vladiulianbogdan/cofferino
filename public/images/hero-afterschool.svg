@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2511"/>
+      <stop offset="60%" style="stop-color:#7C4A2D"/>
+      <stop offset="100%" style="stop-color:#C4714E"/>
+    </linearGradient>
+    <linearGradient id="circle1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8A055;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#E8A055;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="950" cy="80" r="200" fill="url(#circle1)"/>
+  <circle cx="100" cy="380" r="150" fill="rgba(232,160,85,0.12)"/>
+  <circle cx="1100" cy="350" r="100" fill="rgba(255,255,255,0.05)"/>
+  <!-- Small dots pattern -->
+  <circle cx="200" cy="100" r="4" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="350" cy="60" r="3" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="800" cy="380" r="5" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1050" cy="200" r="3" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="450" cy="350" r="4" fill="rgba(255,255,255,0.08)"/>
+  <!-- Icons row -->
+  <text x="140" y="240" font-size="72" text-anchor="middle" opacity="0.35">📚</text>
+  <text x="300" y="200" font-size="56" text-anchor="middle" opacity="0.25">🎨</text>
+  <text x="420" y="280" font-size="48" text-anchor="middle" opacity="0.2">✏️</text>
+  <text x="1000" y="220" font-size="64" text-anchor="middle" opacity="0.3">🏫</text>
+  <text x="1080" y="320" font-size="48" text-anchor="middle" opacity="0.2">⭐</text>
+  <!-- Bottom wave -->
+  <path d="M0 380 Q300 340 600 370 Q900 400 1200 360 L1200 420 L0 420 Z" fill="rgba(0,0,0,0.15)"/>
+</svg>
