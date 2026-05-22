@@ -6,23 +6,22 @@ const data = (await getEntry('pages', 'home'))?.data as any;
 ---
 <Layout title="Acasă" description={data.hero_subtitle}>
   <!-- HERO -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden" style="min-height: 420px">
     <img
       src={data.hero_image}
       alt="Cofferino Hub"
-      class="w-full h-auto block"
+      class="absolute inset-0 w-full h-full object-cover object-center"
       onerror="this.src='/images/placeholder-hero.svg'"
     />
     <div class="hero-overlay absolute inset-0"></div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4 sm:px-6">
-
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20" style="min-height: 420px">
+      <h1 class="font-black leading-tight mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.4); font-size: clamp(1.8rem, 6vw, 3.5rem)">
         {data.hero_title}
       </h1>
-      <p class="text-lg sm:text-xl mb-8 max-w-xl opacity-90">
+      <p class="mb-8 max-w-lg opacity-90" style="color: white; font-size: clamp(1rem, 3vw, 1.25rem)">
         {data.hero_subtitle}
       </p>
-      <a href={data.hero_cta_href} class="btn-primary text-lg px-8 py-4">
+      <a href={data.hero_cta_href} style="display: inline-block; width: auto; background-color: var(--color-warm); color: white; font-weight: 700; font-size: 1rem; padding: 0.875rem 2rem; border-radius: 9999px; text-decoration: none; transition: background-color 0.2s">
         {data.hero_cta_label}
       </a>
     </div>
