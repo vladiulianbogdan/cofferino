@@ -22,6 +22,6 @@ calitate_items:
     title: "Sprijin educativ"
     text: "Ajutăm copiii să-și facă temele și să descopere plăcerea de a învăța."
 about_image: "/images/about-home.jpg"
-maps_embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.9!2d26.08!3d44.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI4JzQ4LjAiTiAyNsKwMDQnNDguMCJF!5e0!3m2!1sro!2sro!4v1620000000000!5m2!1sro!2sro"
-maps_address: "Strada Aviației, Sector 1, București"
+maps_embed: "https://maps.google.com/maps?q=Strada+Elena+Caragiani+20a,+Bucuresti+014214&output=embed"
+maps_address: "Strada Elena Caragiani 20a, București 014214"
 ---
