@@ -25,7 +25,7 @@ calitate_items:
   - icon: 📚
     title: Sprijin educativ
     text: Ajutăm copiii să-și facă temele și să descopere plăcerea de a învăța.
-about_image: /images/about-home.jpg
+about_image: /images/uploads/20260525_162444.jpg
 maps_embed: https://maps.google.com/maps?q=Strada+Elena+Caragiani+20a,+Bucuresti+014214&output=embed
 maps_address: Strada Elena Caragiani 20a, București 014214
 title: Cofferino Hub – Afterschool și Programe pentru Copii
