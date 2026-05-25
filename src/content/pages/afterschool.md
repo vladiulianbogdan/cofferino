@@ -31,9 +31,10 @@ ateliere_items:
     icon: 🥋
     description: Curs aikido pentru dezvoltarea coordonării, forței musculare și
       abilităților de apărare.
-  - name: Arte vizuale
+  - name: Atelier de științe STEM
     icon: 🖌️
-    description: Desen, colaj și proiecte creative adaptate vârstei.
+    description: Stiință, tehnologie, inginerie, matematică si experimente practice
+      adaptate vârstei.
 echipa_title: Echipa noastră
 echipa_text: Text despre echipă – urmează să fie actualizat.
 echipa_image: /images/echipa.jpg
