@@ -27,9 +27,10 @@ ateliere_items:
   - name: Actorie
     icon: 🎭
     description: Improvizație, expresivitate și jocuri de rol pentru creativitate.
-  - name: Educație fizică
-    icon: ⚽
-    description: Jocuri sportive și activități de mișcare în aer liber.
+  - name: "Aikido "
+    icon: 🥋
+    description: Curs aikido pentru dezvoltarea coordonării, forței musculare și
+      abilităților de apărare.
   - name: Arte vizuale
     icon: 🖌️
     description: Desen, colaj și proiecte creative adaptate vârstei.
