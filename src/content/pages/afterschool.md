@@ -1,18 +1,18 @@
 ---
 hero_title: Afterschool Aviației
 hero_subtitle: Un after-school cald, creativ și sigur, pentru copiii tăi.
-hero_image: /images/hero-afterschool.svg
+hero_image: /images/uploads/header-cursuri.png
 program_title: Program Afterschool
 program_items:
   - label: Program școlar
     schedule: 11:30 – 18:00
-    details: Teme, gustare, activități.
-  - label: Program vacanță
+    details: Joacă liberă, teme, gustare, activități, joacă liberă.
+  - label: Program vacanță an școlar
     schedule: 8:30 – 17:00
     details: Program extins în vacanțele școlare.
   - label: Program vacanță de vară
-    schedule: 8:30 – 17:00
-    details: Program complet de vară cu activități tematice.
+    schedule: 8:30 – 18:00
+    details: Program complet de vară cu activități organizte în săptămâni tematice.
 ateliere_title: Ateliere și Opționale
 ateliere_items:
   - name: Limbă germană
