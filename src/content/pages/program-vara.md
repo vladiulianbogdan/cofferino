@@ -62,5 +62,7 @@ scoala_vara_concluzie: La Cofferino, vacanța de vară înseamnă mai mult decâ
 scoala_vara_video_url: ""
 scoala_vara_images:
   - /images/uploads/20250605_103111.jpg
+  - /images/uploads/20260525_162444.jpg
+  - /images/uploads/20250717_111350.jpg
 title: Program de Vară
 ---
