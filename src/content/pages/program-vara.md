@@ -68,5 +68,7 @@ scoala_vara_images:
   - /images/uploads/vv-david.jpg
   - /images/uploads/vv-cate-si-mara.png
   - /images/uploads/img-20250320-wa0014.jpg
+  - /images/uploads/img-20240905-wa0037.jpg
+  - /images/uploads/whatsapp-image-2026-05-26-at-14.23.22-1-.jpeg
 title: Program de Vară
 ---
