@@ -8,5 +8,6 @@ images:
   - src: /images/uploads/20250827_182417.jpg
   - src: /images/uploads/whatsapp-image-2026-05-26-at-14.23.22-1-.jpeg
   - src: /images/uploads/whatsapp-image-2026-05-26-at-14.23.22.jpeg
+  - src: /images/uploads/20250719_200342.jpg
 videos: []
 ---
