@@ -1,7 +1,7 @@
 ---
 hero_title: Afterschool Aviației
 hero_subtitle: Un after-school cald, creativ și sigur, pentru copiii tăi.
-hero_image: /images/uploads/header-cursuri.png
+hero_image: /images/uploads/header-afterschool.png
 program_title: Program Afterschool
 program_items:
   - label: Program școlar
