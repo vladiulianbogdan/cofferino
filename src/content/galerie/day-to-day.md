@@ -13,5 +13,7 @@ images:
     alt: Curs STEM
   - src: /images/uploads/492008405_627054533659634_3923643600008930390_n.jpg
     alt: Teme de vacanță afară
+  - src: /images/uploads/aikido.jpg
+  - src: /images/uploads/pictura-2.jpg
 videos: []
 ---
