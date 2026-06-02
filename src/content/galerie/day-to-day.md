@@ -16,5 +16,7 @@ images:
   - src: /images/uploads/aikido.jpg
   - src: /images/uploads/pictura-2.jpg
   - src: /images/uploads/stem.jpg
+  - src: /images/uploads/484306680_598550843176670_2109922102446741156_n.jpg
+  - src: /images/uploads/468454413_522140064151082_227108980324167415_n.jpg
 videos: []
 ---
