@@ -1,7 +1,7 @@
 ---
 hero_title: Vacanțe pline de aventură
 hero_subtitle: Săptămâni speciale de joacă, creativitate și distracție în vacanțele școlare.
-hero_image: /images/uploads/5.png
+hero_image: /images/uploads/header-vancata-an-scolar.png
 intro_text: >
   Vacanțele scurte dintre module devin la Cofferino adevărate săptămâni de
   aventură, joacă și creativitate! Ne bucurăm de un program special gândit
