@@ -10,5 +10,6 @@ images:
   - src: /images/uploads/20251031_114612.jpg
   - src: /images/uploads/halloween-4.jpg
   - src: /images/uploads/20251217_162907.jpg
+  - src: /images/uploads/20251127_120618.jpg
 videos: []
 ---
