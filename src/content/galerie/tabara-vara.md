@@ -11,5 +11,6 @@ images:
   - src: /images/uploads/20250719_200342.jpg
   - src: /images/uploads/20250827_183404.jpg
   - src: /images/uploads/img-20250716-wa0070.jpg
+  - src: /images/uploads/20250828_154241.jpg
 videos: []
 ---
