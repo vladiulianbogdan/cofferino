@@ -1,7 +1,7 @@
 ---
 hero_title: Vara la Cofferino
 hero_subtitle: Joacă, aventură și amintiri de neuitat pentru copiii tăi.
-hero_image: /images/uploads/2.png
+hero_image: /images/uploads/header-scoala-de-vara.png
 tabara_title: Tabără de Vară Cofferino 🌿☀️
 tabara_text: >
   Cofferino Summer Camp este locul în care copiii se bucură de o vacanță plină
