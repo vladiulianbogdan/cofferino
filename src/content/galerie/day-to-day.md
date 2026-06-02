@@ -15,5 +15,6 @@ images:
     alt: Teme de vacanță afară
   - src: /images/uploads/aikido.jpg
   - src: /images/uploads/pictura-2.jpg
+  - src: /images/uploads/stem.jpg
 videos: []
 ---
