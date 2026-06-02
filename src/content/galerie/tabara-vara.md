@@ -10,5 +10,6 @@ images:
   - src: /images/uploads/whatsapp-image-2026-05-26-at-14.23.22.jpeg
   - src: /images/uploads/20250719_200342.jpg
   - src: /images/uploads/20250827_183404.jpg
+  - src: /images/uploads/img-20250716-wa0070.jpg
 videos: []
 ---
