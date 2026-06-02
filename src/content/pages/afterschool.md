@@ -46,12 +46,19 @@ echipa_text: >+
   Din anul 2020 sunt coordonator și trainer la Future Avenue Education și promovez educația STEM. 
 
 
+
+
+
+
   🐞 Gabriela Lotcu - cadru didactic
 
   "Numele meu este Gabi si am 24 de ani. Am absolvit Facultatea de Psihologie și Științele Educației din cadrul Universității din București, specializarea Psihologie, iar în prezent urmez programul de master „Psihologie Clinică și Psihoterapia Copilului și a Familiei”, în cadrul aceleiași facultăți.
 
 
   De peste 6 ani lucrez în domeniul dezvoltării copilului, având experiență atât cu copii tipici, cât și cu copii cu cerințe speciale. Îmi place să creez relații apropiate și sigure cu cei mici, bazate pe empatie, răbdare și încredere. Consider că sprijinul emoțional este la fel de important ca dezvoltarea educațională, motiv pentru care îmi doresc să îi ajut pe copii să se simtă înțeleși, încurajați și valorizați, astfel încât să se dezvolte armonios pe toate planurile.
+
+
+
 
 
 
@@ -67,11 +74,16 @@ echipa_text: >+
 
 
 
+
+
   🐞 Erica – profesor de Lb Engleza
 
 
 
+
   🐞 Claudia Sandu - supraveghetor
+
+
 
 
 
@@ -85,9 +97,13 @@ echipa_text: >+
 
 
 
+
+
   ✨ Loredana Dobre - Psihoterapeut în specializarea Psihoterapie Cognitiv Comportamentală - Atelierul de Inteligență Emoțională creează un mediu sigur de explorare și acceptare, le oferă jocuri, discuții, activități interesante și materiale prin care îi încurajează să se descopere fiecare cât de minunat este.
 
   La finalul sesiunii, Loredana va discuta și cu părintele despre observațiile asupra copiilor din timpul activităților. 
+
+
 
 
 
