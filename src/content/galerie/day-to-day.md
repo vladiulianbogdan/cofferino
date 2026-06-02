@@ -18,5 +18,6 @@ images:
   - src: /images/uploads/stem.jpg
   - src: /images/uploads/484306680_598550843176670_2109922102446741156_n.jpg
   - src: /images/uploads/468454413_522140064151082_227108980324167415_n.jpg
+  - src: /images/uploads/475050117_564934429871645_805567399040340879_n.jpg
 videos: []
 ---
