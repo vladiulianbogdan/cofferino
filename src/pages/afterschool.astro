@@ -85,8 +85,10 @@ const tabs = ['program', 'ateliere', 'echipa'] as const;
               />
             </div>
           )}
-          <div class="text-lg leading-relaxed text-center" style="color: var(--color-text-muted)">
-            {data.echipa_text}
+          <div class="space-y-4 text-center">
+            {data.echipa_text?.split('\n\n').map((para: string) => (
+              <p class="text-lg leading-relaxed" style="color: var(--color-text-muted)">{para.trim()}</p>
+            ))}
           </div>
         </div>
       </div>
