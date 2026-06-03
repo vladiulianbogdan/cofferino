@@ -2,7 +2,7 @@
 hero_title: Un loc unde copiii cresc fericiți
 hero_subtitle: Afterschool, tabere și programe de vacanță pentru copii cu vârste
   între 6 și 10 ani.
-hero_image: /images/uploads/header-home.png
+hero_image: /images/uploads/4.png
 hero_cta_label: Descoperă programele noastre
 hero_cta_href: /afterschool
 viziune_title: Viziunea noastră
