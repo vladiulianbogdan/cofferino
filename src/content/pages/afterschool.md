@@ -37,7 +37,7 @@ ateliere_items:
       adaptate vârstei.
 echipa_title: Echipa noastră
 echipa_text: >
-  🤖 Ruxandra Dragomir - Coordonator educațional si co-fondator COFFERINO
+  🌱✨ Ruxandra Dragomir - Coordonator educațional si co-fondator COFFERINO
   Afterschool 
 
   Bună! Eu sunt Ruxandra. Sunt licențiată a Facultății de Filologie, specializarea română-engleză, absolventă a programului masteral Management educațional și integrare europeană și absolventă a modulului psiho-pedagogic din cadrul UPG Ploiești. Predau din 2015 și am interacționat cu juniori de toate vârstele (grădiniță, școală primară, școală gimnazială și liceu).
@@ -46,7 +46,7 @@ echipa_text: >
 
 
 
-  🐞 Gabriela Lotcu - cadru didactic
+  🌱✨ Gabriela Lotcu - cadru didactic
 
   Numele meu este Gabi și am 24 de ani. Am absolvit Facultatea de Psihologie și Științele Educației din cadrul Universității din București, specializarea Psihologie, iar în prezent urmez programul de master „Psihologie Clinică și Psihoterapia Copilului și a Familiei", în cadrul aceleiași facultăți.
 
@@ -54,7 +54,7 @@ echipa_text: >
 
 
 
-  🐞 Marius David - cadru didactic
+  🌱✨ Marius David - cadru didactic
 
   Salutare tuturor! Eu sunt Marius.
 
@@ -66,29 +66,30 @@ echipa_text: >
 
 
 
-  🐞 Erica – profesor de Lb. Engleză
+  🌱✨ Erica – profesor de Lb. Engleză
 
 
 
-  🐞 Claudia Sandu - supraveghetor copii
+  🌱✨ Claudia Sandu - supraveghetor copii
 
 
 
-  ☕ Mirela Codreanu - Manager și co-fondator Cofferino Afterschol
+  🌱✨ Mirela Codreanu - Manager și co-fondator Cofferino Afterschol
 
   Bună! Eu sunt Mirela și sunt mamă a doi copii de 7 și de 10 ani. 
 
-  Din dorința de a aduce plus valoarea timpului petrecut de copii după școală, am decis să creăm COFFERINO AFTERSCHOOL. Aici cei mici vor găsi echilibrul dintre confortul de acasă, joacă liberă și activitățile educaționale.
+  Cu o pregătire academică în afaceri și management și o experiență profesională acumulată în companii internaționale și proiecte complexe de dezvoltare, am ales să îmi foloseasc experiența pentru a construi un spațiu în care copiii să învețe, să crească și să se simtă „ca acasă”. Astăzi, misiunea mea este să creez pentru fiecare copil un mediu echilibrat, în care performanța școlară, dezvoltarea personală și bucuria copilăriei să meargă mână în mână.
 
 
 
-  ✨ Loredana Dobre - Psihoterapeut în specializarea Psihoterapie Cognitiv Comportamentală - Atelierul de Inteligență Emoțională creează un mediu sigur de explorare și acceptare, le oferă jocuri, discuții, activități interesante și materiale prin care îi încurajează să se descopere fiecare cât de minunat este.
+
+  🌱✨ Loredana Dobre - Psihoterapeut în specializarea Psihoterapie Cognitiv Comportamentală - Atelierul de Inteligență Emoțională creează un mediu sigur de explorare și acceptare, le oferă jocuri, discuții, activități interesante și materiale prin care îi încurajează să se descopere fiecare cât de minunat este.
 
   La nevoie, Loredana poate discuta și cu părintele despre observațiile asupra copiilor din timpul activităților.
 
 
 
-  🎭 Voicu - Actor la Teatru Ion Creangă și fondator Teatrul din Podul meu - Voicu este cel care ne face zilele mai colorate și mai interesante. El pregătește lecturi și discuții interesante din trecut și ne aduce spectacole și ateliere interactive, educative și pline de haz pentru copii.
+  🎭 ✨Voicu - Actor la Teatru Ion Creangă și fondator Teatrul din Podul meu - Voicu este cel care ne face zilele mai colorate și mai interesante. El pregătește lecturi și discuții interesante din trecut și ne aduce spectacole și ateliere interactive, educative și pline de haz pentru copii.
 echipa_image: /images/uploads/20250605_103111.jpg
 title: Afterschool Cofferino
 ---
