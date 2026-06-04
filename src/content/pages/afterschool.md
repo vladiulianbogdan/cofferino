@@ -37,12 +37,11 @@ ateliere_items:
       adaptate vârstei.
 echipa_title: Echipa noastră
 echipa_text: >
-  🤖 Ruxandra Dragomir - Coordonator educațional program afterschool – Bună! Eu
-  sunt Ruxandra. Sunt licențiată a Facultății de Filologie, specializarea
-  română-engleză, absolventă a programului masteral Management educațional și
-  integrare europeană și absolventă a modulului psiho-pedagogic din cadrul UPG
-  Ploiești. Predau din 2015 și am interacționat cu juniori de toate vârstele
-  (grădiniță, școală primară, școală gimnazială și liceu).
+  🤖 Ruxandra Dragomir - Coordonator educațional si co-fondator COFFERINO
+  Afterschool 
+
+
+  Bună! Eu sunt Ruxandra. Sunt licențiată a Facultății de Filologie, specializarea română-engleză, absolventă a programului masteral Management educațional și integrare europeană și absolventă a modulului psiho-pedagogic din cadrul UPG Ploiești. Predau din 2015 și am interacționat cu juniori de toate vârstele (grădiniță, școală primară, școală gimnazială și liceu).
 
 
   Din anul 2020 sunt coordonator și trainer la Future Avenue Education și promovez educația STEM.
@@ -57,7 +56,7 @@ echipa_text: >
   De peste 6 ani lucrez în domeniul dezvoltării copilului, având experiență atât cu copii tipici, cât și cu copii cu cerințe speciale. Îmi place să creez relații apropiate și sigure cu cei mici, bazate pe empatie, răbdare și încredere. Consider că sprijinul emoțional este la fel de important ca dezvoltarea educațională, motiv pentru care îmi doresc să îi ajut pe copii să se simtă înțeleși, încurajați și valorizați, astfel încât să se dezvolte armonios pe toate planurile.
 
 
-  🐞 Marius David
+  🐞 Marius David - cadru didactic
 
 
   Salutare tuturor! Eu sunt Marius.
@@ -75,25 +74,21 @@ echipa_text: >
   🐞 Erica – profesor de Lb. Engleză
 
 
-  🐞 Claudia Sandu - supraveghetor
+  🐞 Claudia Sandu - supraveghetor copii
 
 
-  ☕ Mirela Codreanu - Manager și fondator Cofferino Hub - Bună! Eu sunt Mirela și sunt mamă a doi copii de 3 și de 6 ani. La fel ca tine știu cât de dificil este să ne regăsim ritmul. Ne dorim să ieșim singuri, dar ne este dor și de fălcuțele care ne așteaptă nerăbdătoare.
+  ☕ Mirela Codreanu - Manager și co-fondator Cofferino Afterschol
 
-
-  De aceea am creat acest spațiu. Un loc unde poți lucra câteva minute neîntrerupt în timp ce copilul se joacă, unde poți deschide o carte pe care nu trebuie să o citești cu voce tare, unde poți bea o cafea bună în timp ce copilul participă la un curs sau un loc unde îl poți aduce liniștit după școală pentru ca o echipă pregătită și dedicată să se ocupe de nevoile juniorului.
-
-
-  Este locul creat special pentru momente minunate împreună cu cel mic, separat sau împreună.
+  Bună! Eu sunt Mirela și sunt mamă a doi copii de 7 și de 10 ani. 
 
 
   Din dorința de a aduce plus valoarea timpului petrecut de copii după școală, am decis să creăm COFFERINO AFTERSCHOOL. Aici cei mici vor găsi echilibrul dintre confortul de acasă, joacă liberă și activitățile educaționale.
 
 
+
   ✨ Loredana Dobre - Psihoterapeut în specializarea Psihoterapie Cognitiv Comportamentală - Atelierul de Inteligență Emoțională creează un mediu sigur de explorare și acceptare, le oferă jocuri, discuții, activități interesante și materiale prin care îi încurajează să se descopere fiecare cât de minunat este.
 
-
-  La finalul sesiunii, Loredana va discuta și cu părintele despre observațiile asupra copiilor din timpul activităților.
+  La nevoie, Loredana poate discuta și cu părintele despre observațiile asupra copiilor din timpul activităților.
 
 
   🎭 Voicu - Actor la Teatru Ion Creangă și fondator Teatrul din Podul meu - Voicu este cel care ne face zilele mai colorate și mai interesante. El pregătește lecturi și discuții interesante din trecut și ne aduce spectacole și ateliere interactive, educative și pline de haz pentru copii.
