@@ -162,6 +162,18 @@ collections:
           - { label: "Google Maps – Embed URL", name: "maps_embed", widget: "string", hint: "URL-ul din iframe-ul Google Maps" }
 
   # ───────────────────────────────────────────────
+  # GALERIE – PAGINA
+  # ───────────────────────────────────────────────
+  - name: "galerie-page"
+    label: "Galerie – Pagina"
+    files:
+      - name: "galerie"
+        label: "Pagina Galerie"
+        file: "src/content/pages/galerie.md"
+        fields:
+          - { label: "Hero – Imagine", name: "hero_image", widget: "image", required: false }
+
+  # ───────────────────────────────────────────────
   # GALERIE – ALBUME
   # ───────────────────────────────────────────────
   - name: "galerie"

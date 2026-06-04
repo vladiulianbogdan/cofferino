@@ -4,21 +4,18 @@ import { getCollection, getEntry } from 'astro:content';
 
 const albumsRaw = await getCollection('galerie');
 const albums = albumsRaw.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+const pageData = (await getEntry('pages', 'galerie'))?.data as any;
+const heroImage = pageData?.hero_image ?? '/images/header-galerie.svg';
 ---
 <Layout title="Galerie" description="Galerie foto și video Cofferino Hub – momente speciale din viața afterschool-ului nostru.">
   <!-- HERO -->
-  <section class="hero-section" style="min-height: 340px">
-    <div class="absolute inset-0">
-      <img src="/images/header-galerie.svg" alt="Galerie Cofferino" class="w-full h-full object-cover"
-        onerror="this.src='/images/placeholder-hero.svg'" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
-      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
-        Galerie
-      </h1>
-      <p class="text-lg opacity-90 max-w-xl">Momente frumoase din viața Cofferino.</p>
-    </div>
+  <section class="w-full">
+    <img
+      src={heroImage}
+      alt="Galerie Cofferino"
+      class="w-full h-auto block"
+      onerror="this.src='/images/placeholder-hero.svg'"
+    />
   </section>
 
   <!-- ALBUMS LIST -->
