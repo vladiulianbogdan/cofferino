@@ -8,18 +8,13 @@ const tabs = ['program', 'ateliere', 'echipa'] as const;
 ---
 <Layout title="Afterschool" description={data.hero_subtitle}>
   <!-- HERO -->
-  <section class="hero-section" style="min-height: 380px">
-    <div class="absolute inset-0">
-      <img src={data.hero_image} alt="Afterschool Cofferino" class="w-full h-full object-cover"
-        onerror="this.src='/images/placeholder-hero.svg'" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 text-white">
-      <h1 class="text-4xl sm:text-5xl font-black mb-4" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3)">
-        {data.hero_title}
-      </h1>
-      <p class="text-lg opacity-90 max-w-xl">{data.hero_subtitle}</p>
-    </div>
+  <section class="w-full">
+    <img
+      src={data.hero_image}
+      alt="Afterschool Cofferino"
+      class="w-full h-auto block"
+      onerror="this.src='/images/placeholder-hero.svg'"
+    />
   </section>
 
   <!-- TABS -->
