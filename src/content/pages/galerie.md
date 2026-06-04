@@ -1,3 +1,3 @@
 ---
-hero_image: /images/header-galerie.svg
+hero_image: /images/uploads/4.png
 ---
