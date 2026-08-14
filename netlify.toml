@@ -6,3 +6,10 @@
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# Astro also emits a meta-refresh page at /after-school; force ensures a real 301.
+[[redirects]]
+  from = "/after-school"
+  to = "/afterschool"
+  status = 301
+  force = true
